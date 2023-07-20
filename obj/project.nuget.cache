@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "1O91Nh/Kvw6KzhUjRdN2kJyXEZCos94a32GMjMcIc7UHh1J6Z/X3ZPzgw0DtRk1e/PvrXx9bBdXMlHgRZC2rNg==",
+  "dgSpecHash": "vZgnuU+5Aw4YU26nd++HUmVgVfOe7VqiV5/ZpcUlgg6/XqyEpx0QV3IaIdz5/qogh0i3ObC4vFgwxLmr0GpOdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\JekyL\\RiderProjects\\ASP_Learning_1\\ASP_Learning_1\\ASP_Learning_1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.20\\microsoft.aspnetcore.mvc.razor.extensions.6.0.20.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\6.0.20\\microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.20.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.20\\microsoft.aspnetcore.razor.language.6.0.20.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.2\\microsoft.codeanalysis.analyzers.3.3.2.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.codeanalysis.common\\4.0.0\\microsoft.codeanalysis.common.4.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.0.0\\microsoft.codeanalysis.csharp.4.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.20\\microsoft.codeanalysis.razor.6.0.20.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.extensions.dependencymodel\\6.0.0\\microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.reflection.metadata\\5.0.0\\system.reflection.metadata.5.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\JekyL\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
   "logs": []
 }
