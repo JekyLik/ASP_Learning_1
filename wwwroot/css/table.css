@@ -25,3 +25,20 @@ td {
     align-items: center;
     margin-top: 30px;
 }
+
+fieldset {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 20px;
+}
+
+h5 {
+    width: 200px;
+    height: 30px;
+    margin-top: 25px;
+}
+
+a{
+    text-decoration: none;
+}

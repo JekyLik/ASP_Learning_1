@@ -8,21 +8,35 @@
 
 <div class="text-center">
     <h1 class="display-4">Домашнее задание</h1><br/>
-    <h2>Добавить товар:</h2>
-    
+
     <form action="@Url.Action("CreateProduct", "Table")" method="Post">
-        Название:<br/>
-        <input type="text" placeholder="название" name="title" value=""/><br/>
-        Описание:<br/>
-        <input type="text" placeholder="описание" name="description" value=""/><br/>
-        Количество:<br/>
-        <input type="number" placeholder="количество" name="price" value=""/><br/>
-        Стоимость за шт.:<br/>
-        <input type="number" placeholder="стоимость" name="quantity" value=""/><br/><br/>
-        <input type="submit" value="Create"/><br/>
+        <fieldset>
+            <h5>Добавить товар:</h5>
+            <div>
+                <label>Название:</label>
+                <input type="text" placeholder="название" name="title" value="" required/>
+            </div>
+            <div>
+                <label>Описание:</label>
+                <input type="text" placeholder="описание" name="description" value="" required/>
+            </div>
+            <div>
+                <label>Стоимость за шт.:</label>
+                <input type="number" placeholder="количество" name="price" value="" required/>
+            </div>
+            <div>
+                <label>Количество:</label>
+                <input type="number" placeholder="стоимость" name="quantity" value="" required/><br/>
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Отправить"/><br/>
+            </div>
+        </fieldset>
     </form>
-    
-    <table class="table-wrapper">
+
+    <table class="table-wrapper"><br/>
+        <h2>Товары на складе</h2>
         <tr>
             <th class="id">Id</th>
             <th>Название</th>
@@ -32,22 +46,37 @@
             <th>Действия</th>
         </tr>
         <tr>
-            <td class="id"><i>Целое число</i></td>
-            <td><i>Текст</i></td>
-            <td class="description"><i>Текст</i></td>
-            <td><i>Дробное число</i></td>
-            <td><i>Целое число</i></td>
-            <td><i>Иконки действий</i></td>
+            <td class="id">
+                <i>Целое число</i>
+            </td>
+            <td>
+                <i>Текст</i>
+            </td>
+            <td class="description">
+                <i>Текст</i>
+            </td>
+            <td>
+                <i>Дробное число</i>
+            </td>
+            <td>
+                <i>Целое число</i>
+            </td>
+            <td>
+                <i>Иконки действий</i>
+            </td>
         </tr>
         @for (int i = 0; i < products.Count; i++)
         {
             <tr>
-                <td class="id">@(i + 1)</td>
+                <td class="id">@products[i].Id</td>
                 <td>@products[i].Title</td>
                 <td class="description">@products[i].Description</td>
                 <td>@products[i].Price</td>
                 <td>@products[i].Quantity</td>
-                <td>✎⌫</td>
+                <td>
+                    <a href="@Url.Action("UpdateProduct", "Table", new { id = products[i].Id })">✎</a>
+                    <a href="@Url.Action("Delete", "Table", new { id = products[i].Id })">⌫</a>
+                </td>
             </tr>
         }
     </table>

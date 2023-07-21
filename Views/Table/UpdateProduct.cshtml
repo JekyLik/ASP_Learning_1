@@ -1,0 +1,36 @@
+﻿@model Product;
+
+@{
+    ViewData["Title"] = "Homework";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Домашнее задание</h1><br/>
+
+    <form action="@Url.Action("Update", "Table", new{})" method="Post">
+        <fieldset>
+            <h5>Изменить товар:</h5>
+            <input type="hidden" placeholder="ID" name="id" value="@(Model.Id)" required readonly/>
+            <div>
+                <label>Название:</label>
+                <input type="text" placeholder="@(Model.Title)" name="title" value="@(Model.Title)" required/>
+            </div>
+            <div>
+                <label>Описание:</label>
+                <input type="text" placeholder="@(Model.Description)" name="description" value="@(Model.Description)" required/>
+            </div>
+            <div>
+                <label>Стоимость за шт.:</label>
+                <input type="number" placeholder="@(Model.Price)" name="price" value="@(Model.Price)" required/>
+            </div>
+            <div>
+                <label>Количество:</label>
+                <input type="number" placeholder="@(Model.Quantity)" name="quantity" value="@(Model.Quantity)" required/><br/>
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Отправить"/><br/>
+            </div>
+        </fieldset>
+    </form>
+</div>
