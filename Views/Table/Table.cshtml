@@ -1,10 +1,27 @@
-﻿@{
+﻿@model IndexModel;
+
+@{
     ViewData["Title"] = "Homework";
     Layout = "~/Views/Table/_LayoutTable.cshtml";
+    var products = Model.Products;
 }
 
 <div class="text-center">
-    <h1 class="display-4">Домашнее задание</h1>
+    <h1 class="display-4">Домашнее задание</h1><br/>
+    <h2>Добавить товар:</h2>
+    
+    <form action="@Url.Action("CreateProduct", "Table")" method="Post">
+        Название:<br/>
+        <input type="text" placeholder="название" name="title" value=""/><br/>
+        Описание:<br/>
+        <input type="text" placeholder="описание" name="description" value=""/><br/>
+        Количество:<br/>
+        <input type="number" placeholder="количество" name="price" value=""/><br/>
+        Стоимость за шт.:<br/>
+        <input type="number" placeholder="стоимость" name="quantity" value=""/><br/><br/>
+        <input type="submit" value="Create"/><br/>
+    </form>
+    
     <table class="table-wrapper">
         <tr>
             <th class="id">Id</th>
@@ -22,14 +39,14 @@
             <td><i>Целое число</i></td>
             <td><i>Иконки действий</i></td>
         </tr>
-        @for (int i = 0; i < Model.Length; i++)
+        @for (int i = 0; i < products.Count; i++)
         {
             <tr>
                 <td class="id">@(i + 1)</td>
-                <td>@Model[i].Title</td>
-                <td class="description">@Model[i].Description</td>
-                <td>@Model[i].Price</td>
-                <td>@Model[i].Quantity</td>
+                <td>@products[i].Title</td>
+                <td class="description">@products[i].Description</td>
+                <td>@products[i].Price</td>
+                <td>@products[i].Quantity</td>
                 <td>✎⌫</td>
             </tr>
         }
