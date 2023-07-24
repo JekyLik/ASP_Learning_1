@@ -1,13 +1,12 @@
 ﻿th {
     border: 1px solid;
-    width: 110px;
+    width: 170px;
     height: 40px;
 }
 
 td {
     border: 1px solid;
-    width: 150px;
-    height: 30px;
+    height: 40px;
     text-align: left;
 }
 
@@ -41,4 +40,33 @@ h5 {
 
 a{
     text-decoration: none;
+}
+
+.buttons {
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #4f5050;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.tr_align-center td{
+    text-align: center ;
+}
+
+.tr_padding-left td{
+    padding-left: 10px;
+}
+
+.tr_padding-left td:last-child{
+    padding-left: 0;
+}
+
+table input {
+    width: 150px;
 }

@@ -35,47 +35,42 @@
         </fieldset>
     </form>
 
-    <table class="table-wrapper"><br/>
-        <h2>Товары на складе</h2>
+    <h2>Товары на складе</h2>
+    <table class="table-wrapper">
         <tr>
-            <th class="id">Id</th>
+            <th>Id</th>
             <th>Название</th>
-            <th class="description">Описание</th>
+            <th>Описание</th>
             <th>Цена за штуку</th>
             <th>Количество</th>
             <th>Действия</th>
         </tr>
-        <tr>
-            <td class="id">
-                <i>Целое число</i>
-            </td>
-            <td>
-                <i>Текст</i>
-            </td>
-            <td class="description">
-                <i>Текст</i>
-            </td>
-            <td>
-                <i>Дробное число</i>
-            </td>
-            <td>
-                <i>Целое число</i>
-            </td>
-            <td>
-                <i>Иконки действий</i>
-            </td>
+        <tr class="tr_align-center">
+            <td><i>Целое число</i></td>
+            <td><i>Текст</i></td>
+            <td><i>Текст</i></td>
+            <td><i>Дробное число</i></td>
+            <td><i>Целое число</i></td>
+            <td><i>Иконки действий</i></td>
         </tr>
         @for (int i = 0; i < products.Count; i++)
         {
-            <tr>
-                <td class="id">@products[i].Id</td>
-                <td>@products[i].Title</td>
-                <td class="description">@products[i].Description</td>
-                <td>@products[i].Price</td>
-                <td>@products[i].Quantity</td>
-                <td>
-                    <a href="@Url.Action("UpdateProduct", "Table", new { id = products[i].Id })">✎</a>
-                    <a href="@Url.Action("Delete", "Table", new { id = products[i].Id })">⌫</a>
+            <tr id="row_@i" class="tr_padding-left">
+                @* <td><input type = "checkbox" hidden id="is_edit_@i" checked="checked"/></td> *@
+                <td>@products[i].Id</td>
+                <td id="title_text_@i">@products[i].Title</td>
+                <td id="description_text_@i">@products[i].Description</td>
+                <td id="price_num_@i">@products[i].Price</td>
+                <td id="quantity_num_@i">@products[i].Quantity</td>
+                <td class="align-center">
+                    <div id="viewState_@i">
+                        <button class="buttons" id="editButton_@i" onclick="onEditClick(@i)">&#10000</button>
+                        <button class="buttons" id="deleteButton_@i" onclick="onDeleteClick(@i)">&#10008</button>
+                    </div>
+                    <div class="d-none" id="editState_@i">
+                        <button class="buttons" id="approveButton_@i" onclick="onApproveClick(@i)">&#9989</button>
+                        <button class="buttons" id="declineButton_@i" onclick="onDeclineClick(@i)">&#10060</button>
+                    </div>
                 </td>
             </tr>
         }

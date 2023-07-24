@@ -77,5 +77,4 @@ public class TableController : Controller
 
         return RedirectToAction("Table", "Table");
     }
-    
 }
